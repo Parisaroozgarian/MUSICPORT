@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sam Jalaen's professional music portfolio. Discover custom beats, instrumental production, mixing & mastering services.">
+    <meta name="keywords" content="Music, Beats, Instrumentals, Mixing, Mastering, Toronto, Sam Jalaen, Custom Beats, Music Production">
+    <meta name="author" content="Sam Jalaen">
+    <meta property="og:title" content="Sam Jalaen - Music Portfolio">
+    <meta property="og:description" content="Discover custom beats, instrumental production, and more from Sam Jalaen.">
+    <meta property="og:image" content="Images/profilebanner.jpg">
+    <meta property="og:url" content="https://www.samjalaen.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Sam Jalaen - Music Portfolio</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a class="navbar-brand" href="#home" aria-label="Home">Sam Jalaen</a>
+        <div class="navbar-toggler" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navbar-nav" id="navbarNav">
+            <a class="nav-link" href="#home" aria-label="Navigate to Home">Home</a>
+            <a class="nav-link" href="#about" aria-label="Navigate to About">About</a>
+            <a class="nav-link" href="#services" aria-label="Navigate to Services">Services</a>
+            <a class="nav-link" href="#music" aria-label="Navigate to Music">Music</a>
+            <a class="nav-link" href="#contact" aria-label="Navigate to Contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section" style="background-image: url('/mnt/data/portfoliomusic.jpg'); background-size: cover;">
+        <div class="container">
+            <h1>Welcome to Sam Jalaen's Music Portfolio</h1>
+            <p style="text-align: center;">Creating Beats | Instrumentals | Professional Sound Production</p>
+            <a href="#music" class="cta-button" aria-label="Discover more music">Discover More Music</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>What I Offer</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-headphones-alt service-icon" aria-hidden="true"></i>
+                    <h3>Custom Beats</h3>
+                    <p>I create custom beats tailored to your needs, perfect for artists looking for something unique.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-music service-icon" aria-hidden="true"></i>
+                    <h3>Instrumental Production</h3>
+                    <p>High-quality instrumental production for your next song, video, or project.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sliders-h service-icon" aria-hidden="true"></i>
+                    <h3>Mixing & Mastering</h3>
+                    <p>Professional mixing and mastering services to make your tracks stand out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section with Tabs -->
+    <section id="music" class="music-section">
+        <h2>My Music</h2>
+        <div class="music-container">
+            <div class="music-item">
+                <h3>Demure - Hip Hop Type Beat</h3>
+                <audio controls preload="auto">
+                    <source src="musics/sam-jalaen-demure-wav-tagged.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="music-item">
+                <h3>Void - Hip Hop Type Beat</h3>
+                <audio controls preload="auto">
+                    <source src="musics/sam-jalaen-void-wav-tagged.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="music-item">
+                <h3>Illusions - Hip Hop Type Beat</h3>
+                <audio controls preload="auto">
+                    <source src="musics/sam-jalaen-illusions-wav-tagged.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to email me or follow me on social media.</p>
+            <div class="email-cta">
+                <p>Email: <a href="mailto:call4bvckup@gmail.com" class="text-danger">call4bvckup@gmail.com</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/samjalaen/" target="_blank" aria-label="Follow me on Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.youtube.com/@samjalaen" target="_blank" aria-label="Subscribe to my YouTube channel"><i class="fab fa-youtube fa-2x"></i></a>
+                <a href="https://www.soundcloud.com/samjalaen" target="_blank" aria-label="Follow me on SoundCloud"><i class="fab fa-soundcloud fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sam Jalaen | Toronto, Canada</p>
+            <p>All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbarNav = document.getElementById('navbarNav');
+            navbarNav.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
