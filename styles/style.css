@@ -115,12 +115,11 @@ header {
 /* Home Section */
 .home-section {
     position: relative;
-    background-image: url('/mnt/data/portfoliomusic.jpg');
+    background-image: url('Images/bannedlandscape.JPG'); /* Corrected path */
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -128,24 +127,43 @@ header {
     animation: fadeIn 1.5s ease-in-out;
 }
 
+/* Add a semi-transparent overlay */
+.home-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Use rgba for transparency */
+    z-index: 1; /* This ensures the overlay is behind the content */
+}
+
+/* Container to hold the content */
+.home-section .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+/* Headline Styling */
 .home-section h1 {
-    font-size: 3rem;
-    color: var(--text-color);
+    font-size: 3.5rem; /* Larger font size */
+    color: #ffffff; /* White color for better contrast */
     margin-bottom: 1.5rem;
     font-weight: 700;
-    text-align: center;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Stronger shadow for better readability */
 }
 
+/* Paragraph Styling */
 .home-section p {
     font-size: 1.4rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     color: #dddddd;
     max-width: 800px;
-    text-align: center;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
 }
 
+/* Call-to-Action Button Styling */
 .home-section .cta-button {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -157,12 +175,15 @@ header {
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0px 6px 20px rgba(230, 57, 70, 0.6);
     text-decoration: none;
+    z-index: 2;
 }
 
 .home-section .cta-button:hover {
     background-color: #d62839;
     transform: scale(1.15);
 }
+
+
 
 /* Fade-in Animation */
 @keyframes fadeIn {
@@ -175,6 +196,7 @@ header {
         transform: translateY(0);
     }
 }
+
 
 /* Services Section */
 .services-section {
@@ -226,48 +248,118 @@ header {
 
 /* Music Section */
 .music-section {
-    padding: 6rem 2rem;
+    padding: 4rem 1rem; /* Reduced padding for a minimal look */
     text-align: center;
     background-color: var(--secondary-color);
 }
 
+/* Grid layout for the music items */
 .music-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Compact grid */
+    gap: 1rem; /* Reduced gap for a tighter look */
+    padding: 1rem;
 }
 
+/* Music Item */
 .music-item {
     background-color: #333;
-    padding: 2rem;
+    padding: 1rem; /* Minimal padding */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 350px;
+    max-width: 100%;
 }
 
 .music-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow on hover */
 }
 
-.music-item h3 {
-    font-size: 1.6rem;
+/* Music Cover Styling */
+.music-cover {
+    width: 100%;
+    height: auto; /* Ensures the height adapts to the image's aspect ratio */
+    max-height: none; /* Removes height restriction to allow full display */
+    object-fit: contain; /* Ensures the full image fits within the container */
+    border-radius: 8px;
     margin-bottom: 1rem;
-    color: var(--text-color);
-    text-transform: uppercase;
+    transition: transform 0.3s ease;
 }
 
+.music-cover:hover {
+    transform: scale(1.03); /* Hover effect */
+}
+
+
+/* Song Title */
+.music-item h3 {
+    font-size: 1rem; /* Smaller text for a minimalist look */
+    margin-bottom: 0.5rem; /* Less space between title and audio */
+    color: var(--text-color);
+}
+
+/* Audio Controls */
 .music-item audio {
     width: 100%;
-    margin-top: 1rem;
-    border-radius: 5px;
+    height: 30px; /* Reduced audio player height */
+    border-radius: 4px; /* Rounded edges for the audio player */
     background-color: #444;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .music-container {
+        grid-template-columns: 1fr; /* One item per row on mobile */
+        gap: 1rem;
+    }
+}
+
+/* Genre Buttons Styling */
+.genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Spacing between buttons */
+    margin-bottom: 2rem;
+}
+
+.genre-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px; /* Soft corners for a modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.genre-button:hover {
+    background-color: #d62839; /* Darker shade on hover */
+    transform: translateY(-3px); /* Subtle hover lift */
+}
+
+.genre-button.active {
+    background-color: #ff4e50; /* Brighter color for the active button */
+    box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4); /* Add a shadow to highlight the active state */
+}
+
+@media (max-width: 768px) {
+    .genre-buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 12px; /* Larger gap between stacked buttons */
+    }
+
+    .genre-button {
+        width: 100%; /* Full width buttons on smaller screens */
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+}
+
 
 /* Contact Section */
 .contact-section {
@@ -352,8 +444,7 @@ footer a:hover {
     }
 
     .music-container {
-        flex-direction: column;
-        gap: 1.5rem;
+        grid-template-columns: 1fr;
     }
 }
 

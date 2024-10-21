@@ -8,7 +8,7 @@
     <meta name="author" content="Sam Jalaen">
     <meta property="og:title" content="Sam Jalaen - Music Portfolio">
     <meta property="og:description" content="Discover custom beats, instrumental production, and more from Sam Jalaen.">
-    <meta property="og:image" content="Images/profilebanner.jpg">
+    <meta property="og:image" content="/Images/bannedlandscape.JPG">
     <meta property="og:url" content="https://www.samjalaen.com">
     <meta name="twitter:card" content="summary_large_image">
     <title>Sam Jalaen - Music Portfolio</title>
@@ -29,7 +29,6 @@
         </div>
         <nav class="navbar-nav" id="navbarNav">
             <a class="nav-link" href="#home" aria-label="Navigate to Home">Home</a>
-            <a class="nav-link" href="#about" aria-label="Navigate to About">About</a>
             <a class="nav-link" href="#services" aria-label="Navigate to Services">Services</a>
             <a class="nav-link" href="#music" aria-label="Navigate to Music">Music</a>
             <a class="nav-link" href="#contact" aria-label="Navigate to Contact">Contact</a>
@@ -37,13 +36,14 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="home-section" style="background-image: url('/mnt/data/portfoliomusic.jpg'); background-size: cover;">
+    <section id="home" class="home-section" style="background-image: url('Images/bannedlandscape.JPG'); background-size: cover;">
         <div class="container">
-            <h1>Welcome to Sam Jalaen's Music Portfolio</h1>
-            <p style="text-align: center;">Creating Beats | Instrumentals | Professional Sound Production</p>
+            <h1>Welcome Sam's Music Portfolio</h1>
             <a href="#music" class="cta-button" aria-label="Discover more music">Discover More Music</a>
         </div>
     </section>
+
+
 
     <!-- Services Section -->
     <section id="services" class="services-section">
@@ -69,30 +69,60 @@
         </div>
     </section>
 
-    <!-- Music Section with Tabs -->
+    <!-- Music Section with Genre Buttons -->
     <section id="music" class="music-section">
-        <h2>My Music</h2>
-        <div class="music-container">
-            <div class="music-item">
-                <h3>Demure - Hip Hop Type Beat</h3>
-                <audio controls preload="auto">
-                    <source src="musics/sam-jalaen-demure-wav-tagged.mp3" type="audio/mpeg">
-                </audio>
+        <div class="container">
+            <h2>My Music</h2>
+
+            <!-- Genre Buttons -->
+            <div class="genre-buttons">
+                <button class="genre-button active" data-genre="funk">Funk</button>
+                <button class="genre-button" data-genre="electronic">Electronic</button>
+                <button class="genre-button" data-genre="downtempo">Downtempo</button>
+                <button class="genre-button" data-genre="hiphop">Hip Hop</button>
+                <button class="genre-button" data-genre="alternativernb">Alternative R&B</button>
+                <button class="genre-button" data-genre="dancehall">Dancehall</button>
+                <button class="genre-button" data-genre="afropop">Afropop</button>
             </div>
-            <div class="music-item">
-                <h3>Void - Hip Hop Type Beat</h3>
-                <audio controls preload="auto">
-                    <source src="musics/sam-jalaen-void-wav-tagged.mp3" type="audio/mpeg">
-                </audio>
+
+
+
+            <!-- Funk Songs -->
+            <div class="music-container active" data-genre="funk">
+                <div class="music-item">
+                    <img src="Images/majesty.jpg" alt="Majesty Cover" class="music-cover">
+                    <h3>Majesty</h3>
+                    <audio controls preload="auto">
+                        <source src="musics/majesty.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
-            <div class="music-item">
-                <h3>Illusions - Hip Hop Type Beat</h3>
-                <audio controls preload="auto">
-                    <source src="musics/sam-jalaen-illusions-wav-tagged.mp3" type="audio/mpeg">
-                </audio>
+
+            <!-- Electronic Songs -->
+            <div class="music-container" data-genre="electronic">
+                <div class="music-item">
+                    <img src="Images/sailor.jpg" alt="Sailor Cover" class="music-cover">
+                    <h3>Sailor</h3>
+                    <audio controls preload="auto">
+                        <source src="musics/Sailor.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="music-item">
+                    <img src="Images/pixel rage.jpg" alt="Pixel Rage Cover" class="music-cover">
+                    <h3>Pixel Rage</h3>
+                    <audio controls preload="auto">
+                        <source src="musics/Pixel Rage.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
             </div>
+
+            <!-- Repeat for other genres... -->
+
+
+            <!-- Repeat for other genres... -->
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
@@ -118,12 +148,7 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navbarNav = document.getElementById('navbarNav');
-            navbarNav.classList.toggle('active');
-        }
-    </script>
-
+    <!-- JavaScript -->
+    <script src="scripts/script.js"></script>
 </body>
 </html>
