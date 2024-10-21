@@ -13,9 +13,14 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile menu toggle
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('toggled');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelector('.navbar-nav');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        console.log('Menu toggled'); // Check if click is working
+    });
 });
 
 // Intersection Observer for section visibility on scroll
@@ -84,6 +89,7 @@ const handleGenreSelection = (genre) => {
     }
 };
 
+
 // Add event listeners to genre buttons
 genreButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -97,6 +103,7 @@ genreButtons.forEach(button => {
         handleGenreSelection(genre);
     });
 });
+
 
 // On page load, make sure the first genre is active
 document.addEventListener('DOMContentLoaded', () => {
