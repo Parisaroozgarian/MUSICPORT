@@ -156,11 +156,13 @@ header {
 
 /* Paragraph Styling */
 .home-section p {
-    font-size: 1.4rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem; /* Adjusted to be slightly smaller */
+    margin-bottom: 1.5rem; /* Reduced margin */
     color: #dddddd;
-    max-width: 800px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow for readability */
+    max-width: 700px; /* Adjusted width to match the heading */
+    margin-left: auto; 
+    margin-right: auto; /* Ensure it's centered */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Call-to-Action Button Styling */
@@ -308,13 +310,6 @@ header {
     background-color: #444;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .music-container {
-        grid-template-columns: 1fr; /* One item per row on mobile */
-        gap: 1rem;
-    }
-}
 
 /* Genre Buttons Styling */
 .genre-buttons {
@@ -346,20 +341,6 @@ header {
     background-color: #ff4e50; /* Brighter color for the active button */
     box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4); /* Add a shadow to highlight the active state */
 }
-
-@media (max-width: 768px) {
-    .genre-buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-        gap: 12px; /* Larger gap between stacked buttons */
-    }
-
-    .genre-button {
-        width: 100%; /* Full width buttons on smaller screens */
-        padding: 12px 0;
-        font-size: 1.1rem;
-    }
-}
-
 
 /* Contact Section */
 .contact-section {
@@ -429,27 +410,159 @@ footer a:hover {
     color: var(--text-color);
 }
 
-/* Responsive Styles */
+/* Mobile responsive styles */
+
 @media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem; /* Reduce the size of the logo text */
+    }
+
     .navbar-toggler {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        align-items: center;
     }
 
     .navbar-nav {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(28, 28, 30, 0.9);
+        width: 100%;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
     }
 
     .navbar-nav.active {
         display: flex;
     }
 
-    .music-container {
-        grid-template-columns: 1fr;
+    .nav-link {
+        padding: 1rem;
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
     }
 }
 
-@media (min-width: 992px) {
+
+/* Home Section Mobile Styles */
+@media (max-width: 768px) {
+    .home-section h1 {
+        font-size: 1.8rem; /* Smaller title size */
+        line-height: 1.2;
+    }
+
+    .home-section p {
+        font-size: 0.9rem; /* Adjust paragraph text size */
+        margin-bottom: 0.8rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem; /* Adjust button text size */
+        padding: 10px 25px; /* Adjust padding for button size */
+        width: auto; /* Set the width to auto for better resizing */
+        display: inline-block;
+        text-align: center;
+    }
+
+    .home-section {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+/* Services Section */
+@media (max-width: 768px) {
+    .services-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .service-card {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Music Section */
+@media (max-width: 768px) {
+    .music-section {
+        padding: 3rem 1.5rem;
+    }
+
+    .music-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
     .music-item {
-        max-width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .music-cover {
+        width: 100%;
+        height: auto;
+    }
+
+    .music-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .music-item audio {
+        height: 25px;
+    }
+}
+
+/* Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact-section p {
+        font-size: 0.95rem;
+    }
+
+    .email-cta a {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.75rem;
+        margin: 0 0.75rem;
+    }
+}
+
+/* Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }

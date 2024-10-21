@@ -1,9 +1,9 @@
-// Handle Navbar scroll effect with smooth background transition
+// Navbar scroll effect and mobile toggle
 const header = document.querySelector('header');
 const menuToggle = document.querySelector('.navbar-toggler');
 const navLinks = document.querySelector('.navbar-nav');
 
-// Add 'scrolled' class to the header when the window is scrolled
+// Add scroll class on window scroll
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
@@ -12,13 +12,11 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Mobile menu toggle with animation
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('toggled');
-    });
-}
+// Mobile menu toggle
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('toggled');
+});
 
 // Intersection Observer for section visibility on scroll
 const sections = document.querySelectorAll('section');
@@ -50,21 +48,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Handle audio error events for a better user experience
+// Select all audio elements
 const audioElements = document.querySelectorAll('audio');
+
+// Function to stop other audios when one starts playing
 audioElements.forEach(audio => {
-    audio.addEventListener('error', () => {
-        console.error(`Error loading audio: ${audio.src}`);
+    audio.addEventListener('play', () => {
+        // Pause all other audio elements
+        audioElements.forEach(otherAudio => {
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+                otherAudio.currentTime = 0; // Reset the playback position
+            }
+        });
     });
 });
 
-// JavaScript to handle genre selection for the music section
+// Genre Selection Logic
 const genreButtons = document.querySelectorAll('.genre-button');
 const musicContainers = document.querySelectorAll('.music-container');
 
 // Function to handle genre selection
 const handleGenreSelection = (genre) => {
-    console.log(`Switching to genre: ${genre}`);  // Debugging
     // Hide all music containers
     musicContainers.forEach(container => {
         container.classList.remove('active');
@@ -75,14 +80,13 @@ const handleGenreSelection = (genre) => {
     if (targetContainer) {
         targetContainer.classList.add('active');
     } else {
-        console.error(`No container found for genre: ${genre}`);  // Debugging
+        console.error(`No container found for genre: ${genre}`);
     }
 };
 
 // Add event listeners to genre buttons
 genreButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Get the genre from the button's data attribute
         const genre = button.getAttribute('data-genre');
 
         // Update active button styles
@@ -96,6 +100,9 @@ genreButtons.forEach(button => {
 
 // On page load, make sure the first genre is active
 document.addEventListener('DOMContentLoaded', () => {
-    const firstActiveGenre = document.querySelector('.genre-button.active').getAttribute('data-genre');
-    handleGenreSelection(firstActiveGenre);
+    const firstActiveGenreButton = document.querySelector('.genre-button.active');
+    if (firstActiveGenreButton) {
+        const firstActiveGenre = firstActiveGenreButton.getAttribute('data-genre');
+        handleGenreSelection(firstActiveGenre);
+    }
 });
