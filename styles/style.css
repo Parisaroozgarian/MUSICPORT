@@ -256,6 +256,7 @@ header {
 }
 
 .music-item {
+    max-width: 100%; /* Take full width */
     background-color: #333;
     padding: 1rem;
     border-radius: 8px;
@@ -274,9 +275,11 @@ header {
 .music-cover {
     width: 100%;
     height: auto;
-    max-height: 150px;
-    object-fit: contain;
+    max-height: 300px;
+    object-fit: cover;
     border-radius: 8px;
+    display: block; /* Ensures the image is treated as a block element */
+    margin: 0 auto 1rem auto; /* Centers the image and adds space below */
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
 }
