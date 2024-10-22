@@ -275,7 +275,7 @@ header {
     width: 100%;
     height: auto;
     max-height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease;
@@ -547,6 +547,7 @@ footer a:hover {
     .music-cover {
         width: 100%;
         height: auto;
+        object-fit: contain; /* Ensures the whole image is visible without cropping */
     }
 
     .music-item h3 {
@@ -557,6 +558,7 @@ footer a:hover {
         height: 25px;
     }
 }
+
 
 /* Contact Section */
 @media (max-width: 768px) {
