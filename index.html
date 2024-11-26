@@ -11,7 +11,7 @@
     <meta property="og:image" content="/Images/bannedlandscape.JPG">
     <meta property="og:url" content="https://www.samjalaen.com">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Sam Jalaen - Music Portfolio</title>
+    <title>SoheIl - Music Portfolio</title>
 
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,249 +21,86 @@
 <body>
     <!-- Navbar -->
     <header>
-        <a class="navbar-brand" href="#home" aria-label="Home">Sam Jalaen</a>
+        <a class="navbar-brand" href="#home" aria-label="Home">SoheIl</a>
         <div class="navbar-toggler" onclick="toggleMenu()" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
         </div>
         <nav class="navbar-nav" id="navbarNav">
             <a class="nav-link" href="#home" aria-label="Navigate to Home">Home</a>
-            <a class="nav-link" href="#services" aria-label="Navigate to Services">Services</a>
             <a class="nav-link" href="#music" aria-label="Navigate to Music">Music</a>
             <a class="nav-link" href="#contact" aria-label="Navigate to Contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home-section" style="background-image: url('Images/bannedlandscape.JPG'); background-size: cover;">
-        <div class="container">
-            <h1>Sam Jalaen</h1>
-            <p>Creating Beats | Instrumentals | Professional Sound Production</p>
-            <a href="#music" class="cta-button" aria-label="Discover more music">More Music</a>
-        </div>
+   <!-- Home Section -->
+   <section id="home" class="home-section" style="background-image: url('Images/Soheill.jpeg'); background-size: cover;">
+
     </section>
-
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2>SERVICES</h2>
-            <div class="services-container">
-                <div class="service-card">
-                    <i class="fas fa-headphones-alt service-icon" aria-hidden="true"></i>
-                    <h3>Custom Beats</h3>
-                    <p>I create custom beats tailored to your needs, perfect for artists seeking something unique.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-music service-icon" aria-hidden="true"></i>
-                    <h3>Instrumental Production</h3>
-                    <p>High-quality instrumental production for your next song, video, or project.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-sliders-h service-icon" aria-hidden="true"></i>
-                    <h3>Mixing & Mastering</h3>
-                    <p>Professional mixing and mastering services to make your tracks stand out.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
 
     <section id="music" class="music-section">
         <div class="container">
             <h2>MUSIC</h2>
-    
-            <!-- Genre Buttons -->
-            <div class="genre-buttons">
-                <button class="genre-button active" data-genre="funk">Funk</button>
-                <button class="genre-button" data-genre="electronic">Electronic</button>
-                <button class="genre-button" data-genre="downtempo">Downtempo</button>
-                <button class="genre-button" data-genre="hiphop">Hip Hop</button>
-                <button class="genre-button" data-genre="alternativernb">Alternative R&B</button>
-                <button class="genre-button" data-genre="dancehall">Dancehall</button>
-                <button class="genre-button" data-genre="afropop">Afropop</button>
-            </div>
-    
-            <!-- Funk Songs -->
-            <div class="music-container active" data-genre="funk">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/majesty.jpg" alt="Majesty Cover" class="music-cover">
-                        <h3>Majesty</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/majesty.mp3" type="audio/mpeg">
-                        </audio>
+            <p>Explore my latest tracks on Spotify. Click below to listen and enjoy!</p>
+            
+            <div class="music-grid">
+                <!-- Track 1: Lost Dream -->
+                <div class="spotify-item">
+                    <div class="track-info">
+                        <h3>Lost Dream</h3>
                     </div>
+                    <iframe 
+                        src="https://open.spotify.com/embed/album/1clUvDX0T8UMhku5msXtLA" 
+                        width="100%" 
+                        height="380" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                    </iframe>
                 </div>
-            </div>
     
-            <!-- Electronic Songs -->
-            <div class="music-container" data-genre="electronic" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/sailor.jpg" alt="Sailor Cover" class="music-cover">
-                        <h3>Sailor</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Sailor.mp3" type="audio/mpeg">
-                        </audio>
+                <!-- Track 2: Notre Dame -->
+                <div class="spotify-item">
+                    <div class="track-info">
+                        <h3>Notre Dame</h3>
                     </div>
-                    <div class="music-item">
-                        <img src="Images/pixel rage.jpg" alt="Pixel Rage Cover" class="music-cover">
-                        <h3>Pixel Rage</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Pixel Rage.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
+                    <iframe 
+                        src="https://open.spotify.com/embed/album/4o48EM8qR5BpeY6IEXT1H2" 
+                        width="100%" 
+                        height="380" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                    </iframe>
                 </div>
-            </div>
     
-            <!-- Downtempo Songs -->
-            <div class="music-container" data-genre="downtempo" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/wolves.jpg" alt="Wolves Cover" class="music-cover">
-                        <h3>Wolves</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Wolves.mp3" type="audio/mpeg">
-                        </audio>
+                <!-- Track 3: Frvr -->
+                <div class="spotify-item">
+                    <div class="track-info">
+                        <h3>Frvr</h3>
                     </div>
-                    <div class="music-item">
-                        <img src="Images/inception.jpg" alt="Inception Cover" class="music-cover">
-                        <h3>Inception</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/inception.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/ellerslie.jpg" alt="Ellerslie Cover" class="music-cover">
-                        <h3>Ellerslie</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Ellerslie.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
+                    <iframe 
+                        src="https://open.spotify.com/embed/album/5AxIflxSMvnUCR4M2pnNpj" 
+                        width="100%" 
+                        height="380" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                    </iframe>
                 </div>
-            </div>
     
-            <!-- Hip Hop Songs -->
-            <div class="music-container" data-genre="hiphop" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/girls.jpg" alt="Girls Cover" class="music-cover">
-                        <h3>Girls</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Girls.mp3" type="audio/mpeg">
-                        </audio>
+                <!-- Track 4: Saat Sheni -->
+                <div class="spotify-item">
+                    <div class="track-info">
+                        <h3>Saat Sheni</h3>
                     </div>
-                    <div class="music-item">
-                        <img src="Images/enemies.jpg" alt="Enemies Cover" class="music-cover">
-                        <h3>Enemies</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Enemies.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/casa.jpg" alt="Casa Cover" class="music-cover">
-                        <h3>Casa</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Casa.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/mind.jpg" alt="Mind Cover" class="music-cover">
-                        <h3>Mind</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Mind.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/cloud.jpg" alt="Cloud Cover" class="music-cover">
-                        <h3>Cloud</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Cloud.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/don'ttrusttherain.jpg" alt="Don't Trust The Rain Cover" class="music-cover">
-                        <h3>Don't Trust The Rain</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Dont Trust The Rain.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Alternative R&B Songs -->
-            <div class="music-container" data-genre="alternativernb" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/illusions.jpg" alt="Illusions Cover" class="music-cover">
-                        <h3>Illusions</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/illusions.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/attention.jpg" alt="Attention Cover" class="music-cover">
-                        <h3>Attention</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Attention.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/summer2025.jpg" alt="Summer 2025 Cover" class="music-cover">
-                        <h3>Summer 2025</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Summer 2025.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/burningsoleil.jpg" alt="Burning Soleil Cover" class="music-cover">
-                        <h3>Burning Soleil</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Burning Soleil.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/divine.jpg" alt="Divine Cover" class="music-cover">
-                        <h3>Divine</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Divine.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Dancehall Songs -->
-            <div class="music-container" data-genre="dancehall" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/mood.jpg" alt="Mood Cover" class="music-cover">
-                        <h3>Mood</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/mood.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="music-item">
-                        <img src="Images/super nova.jpg" alt="Super Nova Cover" class="music-cover">
-                        <h3>Super Nova</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Super Nova.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Afropop Songs -->
-            <div class="music-container" data-genre="afropop" style="display: none;">
-                <div class="music-grid">
-                    <div class="music-item">
-                        <img src="Images/euphoria.jpg" alt="Euphoria Cover" class="music-cover">
-                        <h3>Euphoria</h3>
-                        <audio controls preload="auto">
-                            <source src="musics/Euphoria.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
+                    <iframe 
+                        src="https://open.spotify.com/embed/album/5W7HRITkjZgZ0nCiKUDeCz" 
+                        width="100%" 
+                        height="380" 
+                        frameborder="0" 
+                        allowtransparency="true" 
+                        allow="encrypted-media">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -271,30 +108,50 @@
     
     
     
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2>CONTACT ME</h2>
+        <p>If you'd like to get in touch, feel free to email me or follow me on social media.</p>
+        
+        <div class="email-cta">
+            <p>Email: <a href="mailto:call4bvckup@gmail.com" class="email-link">sohhch1@gmail.com</a></p>
+        </div>
+        
+        <div class="social-links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/sohell6od" target="_blank" aria-label="Follow me on Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            
+            <!-- Snapchat -->
+            <a href="https://www.snapchat.com/add/sohell6od1" target="_blank" aria-label="Add me on Snapchat">
+                <i class="fab fa-snapchat"></i>
+            </a>
+            
+            <!-- Apple Music -->
+            <a href="https://music.apple.com/ca/artist/sohell/1781335059" target="_blank" aria-label="Listen to me on Apple Music">
+                <i class="fab fa-apple"></i>
+            </a>
+            
+            <!-- Telegram -->
+            <a href="https://t.me/sohell6od" target="_blank" aria-label="Message me on Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+            
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@sohell6od" target="_blank" aria-label="Subscribe to my YouTube channel">
+                <i class="fab fa-youtube"></i>
+            </a>
+            
+            <!-- SoundCloud -->
+            <a href="https://soundcloud.com/sohell6od" target="_blank" aria-label="Follow me on SoundCloud">
+                <i class="fab fa-soundcloud"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>CONTACT ME</h2>
-            <p>If you'd like to get in touch, feel free to email me or follow me on social media.</p>
-            
-            <div class="email-cta">
-                <p>Email: <a href="mailto:call4bvckup@gmail.com" class="email-link">call4bvckup@gmail.com</a></p>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/samjalaen/" target="_blank" aria-label="Follow me on Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/@samjalaen" target="_blank" aria-label="Subscribe to my YouTube channel">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.soundcloud.com/samjalaen" target="_blank" aria-label="Follow me on SoundCloud">
-                    <i class="fab fa-soundcloud"></i>
-                </a>
-            </div>
-        </div>
-    </section>
     
     
 
@@ -302,7 +159,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sam Jalaen | Toronto, Canada</p>
+            <p>&copy; 2024 SoheIl | Toronto, Canada</p>
             <p>All Rights Reserved</p>
         </div>
     </footer>
